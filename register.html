@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Caroline Rentals</title>
+
+    <link rel="shortcut icon" href="./images/logo1.gif">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<header class="headerNav">
+    <div class="header">
+            <div class="container" > 
+                <!-- logo -->
+                <a href="./index.html"><img src="./images/logo1.gif" alt="logo" class="logo"></a>
+                
+                <ul>
+                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="./register.html">Register</a></li>
+                </ul>
+            </div>
+    </div>
+
+    <br>
+    
+    <div class="navigation">
+        <ul>
+           <li><a href="./index.html">Home</a></li>
+             <li><a href="product.html">Product</a>
+                 <ul>
+                    <li><a href="./product.familyCar.html">Family Car</a></li>
+                    <li><a href="./product.commercialCar.html">Commercial Car</a></li>
+                    <li><a href="./product.luxuryCar.html">Luxury Car</a></li>
+                </ul>
+                </li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </div>
+    
+</header>
+
+<!-- CONTENT -->
+<body class="register">
+   <h1 id="registerTitle">Register</h1>
+   <br>
+   <div class='registerContainer'>
+        <form id="formRegister">
+            <label for="name">Name :</label>
+            <br>
+            <input type="text" id="txtName">
+            <br>
+
+            <label for="email">Email :</label>
+            <br>
+            <input type="text" id="txtEmail">
+            <br>
+
+            <label for="gender">Gender :</label>
+            <br>
+            <input type="radio" name="gender" class="rbGender"><label for="rbMale" class="rbMale">Male</label>
+            <input type="radio" name="gender" class="rbGender"><label for="rbFemale">Female</label>
+            <br>
+
+            <label for="city">City :</label>
+            <br>
+            <select name="city" id="selCity">
+                <option value="none" selected disabled hidden> 
+                    Select an Option 
+                </option> 
+                <option value="jakarta">Jakarta</option>
+                <option value="bandarLampung">Bandar Lampung</option>
+                <option value="tangerang">Tangerang</option>
+                <option value="other">Other</option>
+            </select>
+            <br>
+
+            <label for="address">Address :</label>
+            <br>
+            <textarea name="address" id="txtAddress" cols="30" rows="4"></textarea>
+            <br>
+
+            <div id="registBtn">
+                <button id="btnRegister" class="submitButton">Register</button>
+            </div>
+            
+    </form>
+
+    <script>
+        let btnLogin = document.querySelector('#btnLogin');
+        let txtName = document.querySelector('#txtName');
+        let txtEmail = document.querySelector('#txtEmail');
+        let rbGender = document.querySelectorAll('.rbGender'); 
+        let selCity = document.querySelectorAll('#selCity');
+        let txtAddress = document.querySelector('#txtAddress')
+
+        let isCompleted = true;
+
+        btnRegister.addEventListener("click", function(e){
+                isCompleted = true;
+                checkInputs();
+                if(isCompleted == true){
+                    e.returnValue = true;
+                    alert("You Have Successfully Registered");
+                }
+                else
+                    e.returnValue = false;
+        });
+
+        function checkInputs(){
+                let txtEmailValue = txtEmail.value.trim();
+                let txtNameValue = txtName.value;
+                let txtAddressValue = txtAddress.value;
+                
+                // Email
+                let emailFormat = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+                if(txtEmailValue === ''){
+                    alert("Email cannot be empty");
+                    isCompleted = false;
+                }
+                else if(!txtEmailValue.match(emailFormat)){
+                    alert("Please enter a valid email address");
+                    isCompleted = false;
+                }
+
+                // Name
+                if(txtNameValue === ''){
+                    alert("Name cannot be empty");
+                    isCompleted = false;
+                }
+
+                // Gender
+                rbValidation();
+
+                // City
+                selectValidation();
+
+                // Address
+                if(txtAddressValue == ''){
+                    alert("Address cannot be empty");
+                    isCompleted = false;
+                }
+                else if(txtAddressValue.indexOf("Street") == -1){   // if 'Street' not found
+                    alert("Address should contain word 'Street'");
+                    isCompleted = false;
+                }
+        }
+
+        function rbValidation(){
+                let gender = document.getElementsByClassName('rbGender');
+                let genderValue = false;
+
+                for(let i = 0; i < gender.length; i++){
+                    if(gender[i].checked == true){
+                                genderValue = true
+                    }
+                }
+
+                if(!genderValue){
+                    alert("Please choose one of the gender");
+                    isCompleted = false;
+                    return false;
+                }
+                else   
+                    return true;
+            }
+
+            function selectValidation(){
+                let select = document.getElementById('selCity');
+
+                if(select.value == 'none'){
+                    alert("Please choose one of the City");
+                    isCompleted = false;
+                    return false;
+                }
+                else   
+                    return true;
+            }
+    </script>
+   </div>
+   
+</body>
+
+
+<footer class="footer">
+    <div class="footerContainer">
+        <div class="socialMedia">
+            <ul>
+                    
+                <li><a href="https://www.instagram.com/" target="_blank"><img src="./images/instagram.png" alt=""></a></li>
+                <li><a href="https://www.youtube.com/" target="_blank"><img src="./images/youtube.png" alt=""></a></li> 
+                 <li><a href="https://www.twitter.com/" target="_blank"><img src="./images/twitter.png" alt=""></a></li> 
+                <li><a href="https://www.facebook.com/" target="_blank"><img src="./images/facebook.png" alt=""></a></li> 
+             </ul>
+                
+         </div>
+    
+          <br>
+    
+        <div class="subscribe">
+            <form id="newsletter">
+                <label for="newsletter">Subscribe Our newsletter</label>
+                <br>
+                <input type="text" id="txtEmail" placeholder="Your Email">
+                <br>
+                <div id="subscribeButton">
+                <button id="btnSubscribe">Subscribe</button>
+                </div>
+            </form>
+        </div>
+    
+        
+        
+        <br>
+        <div class="footerCredits">
+            <p>
+                © Copyright 2020 by Austin Andika Tanujaya
+            </p>
+        </div>
+    </div>  
+</footer>
+
+</html>

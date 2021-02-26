@@ -1,0 +1,590 @@
+html{
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0 0 50x; 
+}
+
+body::after {
+    content: '';
+    display: block;
+    height: 200px; /* footer's height */
+    clear: both;
+}
+  
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.headerNav{
+    background-color: white;
+}
+
+
+/* --- HEADER --- */
+.header{
+    /* border: 1px solid; */
+}
+
+.logo{
+    /* border: 1px solid; */
+    width: 200px;
+    height: auto;
+    float: left;
+    margin-left: 50px;
+}
+
+.header ul{
+    /* border: 1px solid; */
+    float: right;
+    margin-right: 5%;
+    margin-top: 50px;
+}
+
+.header ul li{
+    /* border: 1px solid; */
+    padding-right: 10px;
+    padding-left: 10px;
+    display: inline-block;
+}
+
+.header ul li a{
+    /* border: 1px solid; */
+    color: white;
+    padding: 7px 25px 7px 25px;
+    background-color: #025df6;
+}
+
+.container:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/* --- HEADER - NAVIGATION --- */
+.navigation{
+    width: 100%;
+    background-color: #333333;;
+    height: 38px;
+    
+}
+
+.navigation ul{
+    list-style: none;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+
+.navigation ul li{
+    float: left;
+    display: block;
+}
+
+.navigation ul li a{
+    width: 150px;
+    color: white;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.navigation ul li a:hover{
+    background-color: #025df6;
+}
+
+.navigation ul li ul{
+    background-color: #333333;
+}
+
+.navigation ul li ul li{
+    float: none;
+}
+
+.navigation ul li ul{
+    display: none;
+}
+
+.navigation ul li:hover ul{
+    display: block;
+}
+
+.navigation .active{
+    background-color: #025df6;
+    color: white;
+}
+
+
+/* --- FOOTER --- */
+.footerContainer{
+    clear: both;
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    background-color: white;
+    bottom: 0;
+    height: 200px;
+}
+
+footer .subscribe{
+    border: 2px solid;
+    position: absolute;
+    bottom: 75px;
+    right: 0;
+    padding-right: 200px;
+}
+
+footer .subscribe label{
+    font-weight: bold;
+}
+
+footer .subscribe input{
+    border: none;
+    border-bottom: 1px solid;
+    width: 200px;
+    text-align: center;
+    font-size: small;
+    margin-top: 10px;
+}
+
+footer #newsletter{
+    margin-top:5px ;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+footer #btnSubscribe{
+    border: none;
+    border-radius:2px;
+    background-color: #025df6;
+    color: white;
+    height: 30px;
+    width: 90px;
+    font-weight: bold;
+
+    margin-top: 10px;
+}
+
+footer .socialMedia ul{
+    position: absolute;
+    right: 415px;
+    bottom: 125px;
+}
+
+footer .socialMedia ul li{
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+}
+
+footer .footerCredits{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    color: white;
+    background-color: #025df6;
+    text-align: center;
+    font-size: small;
+    margin: 0;
+    padding: 20px 0px;
+}
+
+
+/* --- INDEX (HOME) - CONTENT --- */
+.home{
+    background-image: url("./images/Alphard.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 300px;
+}
+
+.home h1{
+    color: white;
+    text-align: center;
+    font-size: 70px;
+    margin-top: 50px;
+    
+}
+
+.home #difColor{
+    color: #025df6;
+}
+
+.home h2{
+    color: white;
+    background-color: #2a96eb;
+    margin-top: 30px;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    max-width: 565px;
+    text-align: center;
+}
+
+.home .startContainer{
+    text-align: center;
+}
+
+.home #startBtn {
+    background-color: #2196f3;
+    font-size: large;
+    color: white;
+    border: white solid;
+    padding: 10px 20px 10px 20px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+
+
+/* --- LOGIN - CONTENT --- */
+.login{
+    text-align: center;
+}
+
+.login #loginTitle{
+    text-align: center;
+    margin-top: 50px; 
+    margin-bottom: 20px;  
+}
+
+.login #formLogin label{
+    font-weight: bold;
+}
+
+.login input[type='text']{
+    height: 25px;
+    border: none;
+    border-bottom: 1px solid;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.login input[type='password']{
+    height: 25px;
+    border: none;
+    border-bottom: 1px solid;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.submitButton{
+    background-color: #025df6;
+    font-size: large;
+    color: white;
+    border: white solid;
+    padding: 7px 25px 7px 25px;
+    border-radius: 3px;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+}
+
+.login h3{
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+.login h3 a{
+    color:#025df6;
+}
+
+
+
+/* --- REGISTER - CONTENT --- */
+.registerContainer{
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-bottom: 20px;
+}
+
+.register #registerTitle{
+    text-align: center;
+    margin-top: 50px; 
+    margin-bottom: 20px;  
+}
+
+.register #formRegister label{
+    font-weight: bold;
+    text-align: left;
+}
+
+.register #formRegister input[type='text']{
+    border: none;
+    border-bottom: 1px solid;
+    height: 25px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.register #formRegister input[type='radio']{
+    margin-top: 20px;
+    margin-bottom: 25px;
+    margin-right: 10px;
+}
+
+.rbMale{
+    margin-right: 20px;
+}
+
+.register #formRegister select{
+    margin-top: 20px;
+    margin-bottom: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.register #formRegister textarea{
+    margin-top: 20px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.register #registBtn{
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+
+
+/* --- PRODUCT - CONTENT --- */
+.product h1, h3{
+    text-align: center;
+}
+
+.product h1{
+    margin-top: 50px; 
+    margin-bottom: 20px; 
+}
+
+.product h3{
+    font-size: medium;
+}
+
+ .product .column ul li img{
+    width: auto;
+    height: 125px;
+ }
+
+ .tableContainer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}  
+
+
+ .product .column{
+    height: 350px;
+    width: 200px;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    padding: 10px;
+    border: 3px solid black;
+    margin-right: 20px;
+ }
+
+
+.carList li{
+    text-align: center;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+
+
+
+/* --- CONTACT - CONTENT --- */
+.contact h1{
+    margin-top: 50px; 
+    margin-bottom: 20px; 
+    text-align: center;
+}
+
+.contact #getInTouch label{
+    font-weight: bold;
+}
+
+.contact .formContainer{
+    padding: 50px;
+    margin-left: 100px;
+    margin-right: 50px;
+    margin-bottom: 100px;
+    max-width: 100%;
+    overflow: hidden;
+    float: left;
+    background-color: #f8f8f8;
+}
+
+.contact .identityContainer{
+    float: left;
+    width: 300px;
+    text-align: left;
+    margin-right: 80px;
+}
+
+.contact #getInTouch input[type='text']{
+    height: 25px;
+    border: none;
+    border-bottom: 1px solid;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    width: 100%;
+    
+    background-color: #f8f8f8;
+}
+
+.contact .messageContainer{
+    float: left;
+    width: 300px;
+}
+
+.contact textarea{
+    height: 230px;
+    width: 100%;
+    
+}
+
+.sendButton {
+    background-color: #025df6;
+    font-size: large;
+    color: white;
+    border: white solid;
+    padding: 15px 25px 15px 25px;
+    border-radius: 3px;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    margin-left: 100px;
+    margin-top: 15px;
+} 
+
+.contact .contactUs{
+    float: left;
+    width: 400px;
+    margin-left: 100px;
+    overflow: hidden;
+}
+
+.contact .contactUs p{
+    padding-top: 35px;
+    font-weight: bold;
+}
+
+.contact .contactUs a{
+    color: #025df6;
+}
+
+
+
+/* --- FOR MEDIA (MAX : 600px) --- */
+@media only screen and  (max-width: 600px) {
+    /* HEADER */
+    .header{
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .logo{
+        margin-left: 0;
+        float: none;
+    }
+
+    .header ul li{
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .header ul{
+        float: none;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+    }
+
+    /* HEADER - NAVIGATION */
+    .navigation ul li{
+        background-color: #333333
+    }
+
+    .navigation ul li a{
+        width: 100px;
+    }
+
+
+    /* FOOTER */
+    footer .subscribe{
+        padding-right: 0px;
+    }
+
+    footer .socialMedia ul{
+        position: absolute;
+        right: 220px;
+        bottom: 100px;
+    }
+
+    .tableContainer {
+        display: block;
+    }  
+
+    /* INDEX (HOME) */
+    .home h1{
+        font-size: x-large;
+    }
+
+    .home h2{
+        font-size: large;
+        max-width: 350px;
+    }
+    
+    /* PRODUCT */
+    .product .column{
+        width: 100%;
+        margin-top: 20px;
+     }
+
+     /* CONTACT */
+     .contact .formContainer {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 30px;
+        padding-right: 0;
+    }
+
+    .contact .contactUs {
+        margin-left: 30px;
+        margin-bottom: 100px;
+        width: 300px;
+    }
+
+}
+
+
